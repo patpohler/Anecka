@@ -9,9 +9,15 @@
 	<link href="{site_url}css/bootstrap.css" rel="stylesheet">
 	<link href="{site_url}css/bootstrap-responsive.css" rel="stylesheet">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!-- to do, move these styles in a css file -->
+	<style>
+		.pad_bottom_medium {padding-bottom:20px;}
+		.pad_bottom_large {padding-bottom:60px;}
+	</style>
+	<!-- end to do-->
 </head>
-<body>
-	<div class="navbar navbar-fixed-top">
+<body data-spy="scroll">
+	<div id="navTop" class="navbar navbar-fixed-top">
     	<div class="navbar-inner">
         	<div class="container">
           		<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -22,26 +28,68 @@
           		<a class="brand" href="#">Anecka</a>
           		<div class="nav-collapse">
             		<ul class="nav">
-              			<li class="active"><a href="#">welcome</a></li>
-              			<li><a href="/#our_work">our work</a></li>
+              			<li><a href="#welcome">welcome</a></li>
+              			<li><a href="#our_work">our work</a></li>
               			<li><a href="#know_us_better">know us better</a></li>
             		</ul>
 					<ul class="nav pull-right">
 						<li><a href="#talk_to_us">talk to us</a></li>
-			  			<li><a href="#support">support</a></li>
+			  			<!--<li><a href="#support">support</a></li>-->
 					</ul>
           		</div><!--/.nav-collapse -->
         	</div>
       	</div>
 	</div>
 	<div class="container">
-		<div class="hero-unit">
+		<!--
+		<div id="welcome" class="hero-unit">
         	<h1>We make premium web and mobile web apps</h1>
         	<p id="tagline">At Anecka, we do one thing, create fantastic web and mobile web applications. Located in Columbus, Ohio, we pair a Midwest work ethic with superior talent.</p>
         	<p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
       	</div>
-		<!--welcome-->
-		<div class="row">
+		-->
+		<!--end welcome (hero)-->
+		<!-- start welcome spinner-->
+		<div id="welcome" class="carousel pad_bottom_large">
+		  <!-- Carousel items -->
+		  <div class="carousel-inner">
+		    <div class="active item">
+				<img src="http://placehold.it/940x402" alt="">
+				<div class="carousel-caption">
+					<h4>We make premium web and mobile web apps</h4>
+	        		<p id="tagline">At Anecka, we do one thing, create fantastic web and mobile web applications. Located in Columbus, Ohio, we pair a Midwest work ethic with superior talent.</p>
+	        		<!--<p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>-->
+				</div>
+			</div>
+		    <div class="item">
+				<img src="http://placehold.it/940x402" alt="">
+				<div class="carousel-caption">
+					<h4>Our Clients Rock</h4>
+		           	<p>Our clients are serious businesses and non-profits (sorry, look somewhere else if you want to build the next Facebook for $200)</p>
+				</div>
+			</div>
+		    <div class="item">
+				<img src="http://placehold.it/940x402" alt="">
+				<div class="carousel-caption">
+					<h4>We Get Things Done</h4>
+			        <p>We're a full-time firm with design, development, support and project management. We return emails, calls and build things that look really nice.</p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="http://placehold.it/940x402" alt="">
+				<div class="carousel-caption">
+					<h4>Our Geek-fu is Strong</h4>
+			        <p>We build projects in a wide variety of tech: Wordpress, ExpressionEngine, Convio, jQuery, ASP.NET, C#, PHP &amp; MySQL to name a few.</p>
+				</div>
+			</div>
+		  </div>
+		  <!-- Carousel nav -->
+		  <a class="carousel-control left" href="#welcome" data-slide="prev">&lsaquo;</a>
+		  <a class="carousel-control right" href="#welcome" data-slide="next">&rsaquo;</a>
+		</div>
+		<!-- end welcome spinner -->
+		<!--
+		<div class="row pad_bottom_large">
         	<div class="span4">
 				<h2>Our Clients Rock</h2>
 	           <p>Our clients are serious businesses and non-profits (sorry, look somewhere else if you want to build the next Facebook for $200)</p>
@@ -58,64 +106,97 @@
 	          <p><a class="btn" href="#">View details &raquo;</a></p>
 	        </div>
       	</div>
+		-->
+		<!-- end welcome -->
 		<!--our work-->
-		<div class="row ourwork">
-			<div class="span12"><h1 id="our_work">our work</h1>
-				<div class="tabbable tabs-left">
-					<!--clients-->
-					<ul class="nav nav-tabs">
-						<li class="active"><a href="#tab1" data-toggle="tab">American Cancer Society</a></li>
-						<li><a href="#tab2" data-toggle="tab">Section 2</a></li>
-					</ul>
-					<div class="tab-content">
-						<div class="tab-pane active" id="tab1">
-							<!--start project-->
-							<div class="row">
-								<div class="span6">
-									<ul class="thumbnails">
-									  	<li class="span4">
-									    	<div class="thumbnail">
-									      		<img src="http://placehold.it/360x268" alt="">
-									      		<h5>American Cancer Society</h5>
-									      		<p>Project</p>
-									    	</div>
-									  	</li>
-										<!--smaller thumbs-->
-										<li class="span2">
-											<img src="http://placehold.it/160x120" alt="">
-										 </li>
-										<li class="span2">
-										    <img src="http://placehold.it/160x120" alt="">
-										 </li>
-									</ul>
-								</div>
+		<div id="our_work" class="row pad_bottom_large">
+			<h1 class="pad_bottom_medium span12">Our work</h1>
+			<div class="tabbable tabs-left pad_bottom_large span12">
+				<!--clients-->
+				<ul class="nav nav-tabs span4">
+					<li class="active"><a href="#tab1" data-toggle="tab">American Cancer Society</a></li>
+					<li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+				</ul>
+				<div class="tab-content span6">
+					<div class="tab-pane active" id="tab1">
+						<!--start project-->
+						<div class="row">
+							<div class="span6">
+								<ul class="thumbnails">
+								  	<li class="span4">
+								    	<div class="thumbnail">
+								      		<a href="#"><img src="http://placehold.it/360x268" alt=""></a>
+								      		<h5>American Cancer Society</h5>
+								      		<p>Project</p>
+								    	</div>
+								  	</li>
+									<!--smaller thumbs-->
+									<li class="span2">
+										<a href="#" class="thumbnail"><img src="http://placehold.it/160x120" alt=""></a>
+									 </li>
+									<li class="span2">
+									    <a href="#" class="thumbnail"><img src="http://placehold.it/160x120" alt=""></a>
+									 </li>
+								</ul>
+								<!--technologies used-->
+								<p><strong>technologies</strong><br/>
+									<code>ASP.NET</code>, <code>C#</code>, <code>SQL Server</code>
+								</p>
 							</div>
-							<!--technologies used-->
-							<div class="row">
-								<div class="span6">
-									<p><strong>technologies</strong></p>
-									<ul class="thumbnails">
-										<li class="span2">
-											<img src="http://placehold.it/160x120" alt="">
-										 </li>
-										<li class="span2">
-										    <img src="http://placehold.it/160x120" alt="">
-										 </li>
-										<li class="span2">
-											<img src="http://placehold.it/160x120" alt="">
-										 </li>
-									</ul>
-								</div>
-							</div>
-							<!--end project-->
 						</div>
-						<div class="tab-pane" id="tab2">
-							<p>I'm in section 2</p>
-						</div>
+						<!--end project-->
+					</div>
+					<div class="tab-pane" id="tab2">
+						<p>I'm in section 2</p>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- end our work-->
+		<!-- start "know us" -->
+		<div id="know_us_better" class="row pad_bottom_large">
+			<h1 class="span12 pad_bottom_medium">Know us better</h1>
+			<div class="span3">
+				<img src="http://placehold.it/168x154" alt="">
+			</div>
+			<div class="span8">
+				<h3>Patrick Pohler : owner / principle consultant</h1>
+				<hr/>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+		<!-- end "know us" -->
+		<!-- talk to us -->
+		<div id="talk_to_us"  class="row pad_bottom_large">
+			<h1 class="span12 pad_bottom_medium">Talk to us</h1>
+			<div class="span4">
+				<form class="well">
+				  <label>Label name</label>
+				  <input type="text" class="span3" placeholder="Type something…">
+				  <span class="help-block">Example block-level help text here.</span>
+				  <label class="checkbox">
+				    <input type="checkbox"> Check me out
+				  </label>
+				  <button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+			<div class="span4">
+				<p>email<br/>
+					mailto:ppohler@gmail.com</p>
+				<p>phone<br/>
+					5024321439</p>
+				<p>twitter<br/>
+					@patpohler</p>
+				<p>linkedIn<br/>
+					in/anecka</p>
+			</div>
+			<div class="span4">
+				232 N. 3rd St.
+				Suite, 204
+				Columbus, OH 43215
+			</div>
+		</div>
+		<!-- end talk to us-->
 		<hr/>
 		<footer>
         	<p>&copy; Anecka 2012</p>
