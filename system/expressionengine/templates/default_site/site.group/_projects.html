@@ -1,0 +1,41 @@
+{exp:channel:entries channel="Projects" category="{embed:category_id}"}
+<!--start project-->
+<div class="row">
+	<div class="span6">
+		<ul class="thumbnails">
+		  	<li class="span4">
+		    	<div class="thumbnail">
+					{image_1}
+		      		<a data-toggle="modal" href="#{filename}">
+						<img src="{path}_thumb_large/{filename}.png" alt="">
+					</a>
+					{/image_1}
+		      		<h5><a href="{website_url}" target="_blank">{title}</a></h5>
+		      		{project_description}
+		    	</div>
+		  	</li>
+			<!--smaller thumbs-->
+			{image_2}
+			<li class="span2">
+				<a data-toggle="modal" href="#{filename}" class="thumbnail"><img src="{path}_thumb_small/{filename}.png" alt=""></a>
+			 </li>
+			{/image_2}
+			{image_3}
+			<li class="span2">
+				<a data-toggle="modal" href="#{filename}" class="thumbnail"><img src="{path}_thumb_small/{filename}.png" alt=""></a>
+			 </li>
+			{/image_3}
+		</ul>
+		<!--technologies used-->
+		<p><strong>technologies</strong><br/>
+			{categories show_group="2"}
+				<code>{category_name}</code>
+			{/categories}
+			<!--
+			<code>ASP.NET</code>, <code>C#</code>, <code>SQL Server</code>
+			-->
+		</p>
+	</div>
+</div>
+<!--end project-->
+{/exp:channel:entries}
