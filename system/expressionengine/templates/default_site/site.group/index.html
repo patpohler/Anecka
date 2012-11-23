@@ -25,6 +25,7 @@
             		<ul class="nav">
               			<li><a href="#welcome">welcome</a></li>
               			<li><a href="#our_work">our work</a></li>
+						<li><a href="#others_saying">testimonials</a></li>
               			<li><a href="#know_us_better">know us better</a></li>
 						<li><a href="#talk_to_us">talk to us</a></li>
             		</ul>
@@ -75,6 +76,19 @@
 			</div>
 		</section>
 		<!-- end our work-->
+		<!-- what others are saying -->
+		<section id="others_saying">
+			<div id="others_saying" class="row pad_bottom_large">
+				<h1 class="span12 pad_bottom_medium">Testimonials</h1>
+				{exp:channel:entries channel="Testimonials"}
+					<div class="span4">
+						<blockquote>{quote} <p><strong>- {client}</strong></blockquote>
+						
+					</div>
+				{/exp:channel:entries}
+			</div>
+		</section>
+		<!-- /what others are saying -->
 		<!-- start "know us" -->
 		<section id="know_us_better">
 			<div id="know_us_better" class="row pad_bottom_large">
@@ -96,19 +110,6 @@
 		<section id="talk_to_us">
 			<div class="row pad_bottom_large">
 				<h1 class="span12 pad_bottom_medium">Talk to us</h1>
-				<!--
-				<div class="span4">
-					<form class="well">
-					  <label>Label name</label>
-					  <input type="text" class="span3" placeholder="Type something…">
-					  <span class="help-block">Example block-level help text here.</span>
-					  <label class="checkbox">
-					    <input type="checkbox"> Check me out
-					  </label>
-					  <button type="submit" class="btn btn-primary">Submit</button>
-					</form>
-				</div>
-				-->
 				<div class="span4">
 					<p>email<br/>
 						<a href="mailto:{contact_email}">{contact_email}</a></p>
