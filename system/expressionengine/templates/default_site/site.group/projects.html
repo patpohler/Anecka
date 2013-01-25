@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>PDF</title>
+</head>
+<body>
+<h1 class="pad_bottom_medium span12">Our work</h1>
+<div class="tabbable tabs-left pad_bottom_large span12">
+	<!--clients-->
+	<ul class="nav nav-tabs span4">
+		{exp:channel:categories category_group="1" show_empty="no" style="linear"}
+			<li {if "{count}" == "1"}class="active"{/if}><a href="#tab{category_id}" data-toggle="tab">{category_name}</a></li>
+		{/exp:channel:categories}
+	</ul>
+	<div class="tab-content span6">
+		{exp:channel:categories category_group="1" show_empty="no" style="linear"}
+			<div class="tab-pane fade {if "{count}" == "1"}in active{/if}" id="tab{category_id}">
+				{embed="site/_projects" category_id="{category_id}"}
+			</div>
+		{/exp:channel:categories}
+	</div>
+</div>
+</body>
+</html>

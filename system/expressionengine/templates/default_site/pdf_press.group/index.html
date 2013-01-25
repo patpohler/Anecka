@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{site_header}
+</head>
+<body>
+	{site_nav}
+	<div class="container">
+		<section id="welcome">
+			<div class="hero-unit rotate-unit green-bk white-fore">
+				<h1>PDF Press</h1>
+	        	<p id="tagline">Save your ExpressionEngine Templates to PDF In Seconds! No 3rd party service (or monthly fee) required!</p>
+	        	<p><a class="btn btn-primary btn-large" href="http://gum.co/pdfpress">Buy Now for $15</a><script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script></p>
+	      	</div>
+		</section>
+		<div class="row">
+			<div class="span4">
+				<h2>Easy to Install</h2>
+	           	<p>PDF Press works out of the box without any additional 3rd party services.</p>
+	        </div>
+			<div class="span4">
+				<h2>Easy to Use</h2>
+	           	<p>PDF Press is a snap to use, simply include your PDF CSS stylesheet and use one of our two tags.</p>
+	        </div>
+			<div class="span4">
+				<h2>No Monthly Subscription</h2>
+	           	<p>PDF Press converts HTML/CSS to PDF without a monthly subscription from PDFCrowd or other services.</p>
+	        </div>
+		</div>
+		<p>&nbsp;</p>
+		<div class="row">
+			<div class="tabbable span12"> <!-- Only required for left/right tabs -->
+				<ul class="nav nav-tabs">
+			  		<li class="active"><a href="#tab1" data-toggle="tab">Details</a></li>
+					<li><a href="#tab2" data-toggle="tab">Installation &amp; User Guide</a></li>
+					<li><a href="#tab3" data-toggle="tab">Support &amp; Troubleshooting</a></li>
+			  	</ul>
+			  	<div class="tab-content">
+			    	<div class="tab-pane active" id="tab1">
+						<div class="span5">
+							<h3>Overview</h3>
+		      				<p>PDF Press is the easiest way to save your ExpressionEngine templates to PDF. PDF Press is a stand-alone module, you don't need any additional services or 3rd party software.</p>
+							
+							<h3>Tags</h3>
+							<p>The syntax is very easy to use, you have the option of using two ExpressionEngine tags to generate a pdf</p>
+			    			<p>
+								<ul>
+									<li>
+										<strong>&#123;exp:pdf_press:save_to_pdf&#125;</strong> – generates a link to download the template as a PDF and it has the following parameters:
+										<ul>
+											<li><strong>path (optional)</strong> – accepts an ExpressionEngine path to convert to a PDF, if no path is given, then the current page will be used</li>
+											<li><strong>filename (optional)</strong> – specifies the filename for the downloaded PDF</li>
+											<li><strong>size (optional)</strong> – specifies the paper size for the output PDF file see (ex. ‘letter’, ‘legal’, ‘a5’, etc). You can view all of the available sizes by checking under the “Size” dropdown of the PDF Preview tab</li>
+											<li><strong>orientation (optional)</strong> – specifies the orientation of the content, either “portrait” (default) or “landscape”</li>
+											<li><strong>attachment (optional)</strong> – this parameter controls whether the PDF will be automatically downloaded (attachment=1) or whether the PDF will be opened in the browser (attachment=0). </li>
+										</ul>
+									</li>
+									<li>
+										<strong>&#123;exp:pdf_press:save_to_pdf_form&#125;...&#123;/exp:pdf_press:save_to_pdf_form&#125;</strong> – this tagpair generates a form instead of a link, it has the same parameters as <strong>&#123;exp:pdf_press:save_to_pdf&#125;</strong>
+									</li>
+								</ul>
+							</p>
+						</div>
+						<div class="span6">
+							<img src="{site_url}img/pdf_screen.png">
+							<p>&nbsp;</p>
+							<h3>Examples</h3>
+							<p>Using the <b>save_to_pdf</b> tag (with "path=" parameter):</p>
+							<pre>&lt;a href="&#123;exp:pdf_press:save_to_pdf path='site/projects'&#125;"&gt;Save as PDF&lt;/a&gt;</pre>
+							
+							<p>Using the <b>save_to_pdf_form</b> tag pair:</p>
+							<pre>&#123;exp:pdf_press:save_to_pdf_form&#125;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="submit" class="btn"&gt;Save to PDF&lt;/button&gt;<br/>&#123;/exp:pdf_press:save_to_pdf_form&#125;
+							</pre>
+							
+							<h3>Formatting the PDF File</h3>
+							<p>Formatting the PDF file is a simple as creating a special CSS file and referencing it in the <head> tag in your template. Use the “media” attribute and set it to “pdf”</p>
+							<pre>&lt;link href="{site_url}css/pdf.css" rel="stylesheet" media="pdf"&gt;</pre>
+							
+						</div>
+					</div>
+			    	<div class="tab-pane" id="tab2">
+						<div class="span11">
+			      			<h3>Prerequisites</h3>
+							<p>Make sure your system meets the following requirements:</p>
+							<ul>
+								<li>PHP 5.0+</li>
+								<li>DOMDocument extension</li>
+								<li>PCRE</li>
+								<li>Zlib</li>
+								<li>MBString extension</li>
+								<li>GD</li>
+								<li>ExpressionEngine 2.0 or later</li>
+								<li>jQuery Add-On for ExpressionEngine Installed</li>
+							</ul>
+						
+							<h3>Installation Instructions</h3>
+							<ol>
+								<li>Copy the “third_party/pdf_press” folder to “system/expressionengine/third_party/”</li>
+								<li>Install the module by going to Add-Ons > Modules, look for PDF Press and click “Install”</li>
+								<li>You should be ready to go! To be sure though, you can verify your system is able to generate PDFs by going to the PDF Press module’s Control Panel (Add-Ons > Modules > PDF Press)</li>
+							</ol>
+						
+							<h3>Complete User Guide</h3>
+							<p><a href="{site_url}PDF_Press_User_Guide.pdf">User Guide</a></p>
+						</div>
+			    	</div>
+					<div class="tab-pane" id="tab3">
+						<div class="span12">
+							<div class="row">
+								<div class="span5">
+									<h3>PDF Preview</h3>
+									<p>A helpful tool you can use to develop your PDF templates with PDF Press is the PDF Preview tab. You can find it under Add-Ons > Modules > PDF Press > PDF Preview</p>
+									<p>Specify the size, orientation and an ExpressionEngine template path (‘site/test’) and click “Submit”. The PDF (or other output if there’s an error) will be displayed below in an iframe. <b>In order for the PDF Preview to work, you MUST have the JQuery Module installed.</b></p>
+					    		</div>
+								<div class="span6">
+									<img src="{site_url}img/pdf_preview.png" />
+					    		</div>
+							</div>
+							<div class="row">
+								<div class="span5">
+									<h3>Tips & Troubleshooting</h3>
+
+									<p>You can troubleshoot the PDF document by setting the following settings in “dompdf_config.custom.inc.php”:</p>
+
+									<pre>define("DEBUG_LAYOUT", true);
+									define("DEBUG_LAYOUT_LINES", true);
+									define("DEBUG_LAYOUT_BLOCKS", true);
+									define("DEBUG_LAYOUT_INLINE", true);</pre>
+
+									<p>The DOMPDF library is VERY STRICT when it parses the HTML & CSS of your template. If you are having trouble getting your PDF to generate, run your HTML & CSS through a validator, such as the W3C Validation Service (<a href="http://validator.w3.org">http://validator.w3.org</a>)</p>
+
+									<p>You can troubleshoot your template using the PDF Preview tab in the Control Panel. Just go to Add-Ons > Modules > PDF Press > PDF Preview</p>
+							
+									<h3>Support</h3>
+									<p>If you have any questions or concerns please email: <a href="mailto:pdf_press@anecka.com">pdf_press@anecka.com</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+			  	</div>
+			</div>
+		</div>
+		<hr/>
+		{site_footer}
+	</div>
+	<!-- Placed at the end of the document so the pages load faster -->
+    {site_js}
+</body>
+</html>

@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	{site_header}
+	<meta charset="utf-8">
+	<title>{site_title}</title>
+	<meta name="description" content="{site_description}">
+	<meta name="keywords" content="{site_keywords}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="{site_url}css/bootstrap.css" rel="stylesheet">
+	<link href="{site_url}css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+	<link href="{site_url}css/anecka.css" rel="stylesheet">
+	<link href="{site_url}css/pdf.css" rel="stylesheet" media="pdf">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 </head>
 <body>
-	{site_nav}
+	<div id="navTop" class="navbar navbar-fixed-top">
+    	<div class="navbar-inner">
+        	<div class="container">
+          		<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+          		</a>
+          		<a class="brand" href="#">Anecka</a>
+          		<div class="nav-collapse">
+            		<ul class="nav">
+              			<li><a href="#welcome">welcome</a></li>
+              			<li><a href="#our_work">our work</a></li>
+						<li><a href="#others_saying">testimonials</a></li>
+              			<li><a href="#know_us_better">know us better</a></li>
+						<li><a href="#talk_to_us">talk to us</a></li>
+            		</ul>
+          		</div><!--/.nav-collapse -->
+        	</div>
+      	</div>
+	</div>
 	<div class="container">
 		{exp:channel:entries channel="Welcome" }
 		<section id="welcome">
-		<div id="myCarousel" class="carousel slide" data-interval="10000" data-pause="hover">
-			<div class="carousel-inner">	
-				<div class="active item">
-					<div class="hero-unit rotate-unit orange-bk white-fore">
-						<h1>{eyecatch}</h1>
-			        	<p id="tagline">{tagline}</p>
-			        	<!--<p><a href="#our_work" class="btn btn-primary btn-large">See our work &raquo;</a></p>-->
-			      	</div>
-				</div>
-				<div class="item">
-					<div class="hero-unit rotate-unit blue-bk white-fore">
-						<h1>We Love ExpressionEngine&trade;!</h1>
-			        	<p id="tagline">We combine a deep understanding of the ExpressionEngine platform paired with expertise in developing custom add-ons and full-scale web applications.</p>
-			        	<!--<p><a href="#our_work" class="btn btn-primary btn-large">See our work &raquo;</a></p>-->
-			      	</div>
-				</div>
-				<div class="item">
-					<div class="hero-unit rotate-unit green-bk white-fore">
-		        		<h1>PDF Press for ExpressionEngine&trade;</h1>
-			        	<p id="tagline">Save your ExpressionEngine Templates to PDF In Seconds! No 3rd party service (or monthly fee) required!</p>
-						<p><a href="{path='pdf_press'}" class="btn btn-primary btn-large">Learn More &amp; Download &raquo;</a></p>
-					</div>
-				</div>
-				
-			</div>
-			<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-			<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-		</div>
+		<div class="hero-unit orange-bk white-fore">
+        	<h1>{eyecatch}</h1>
+        	<p id="tagline">{tagline}</p>
+        	<p><a href="#our_work" class="btn btn-primary btn-large">See our work &raquo;</a></p>
+      	</div>
 		
 		<!--end welcome (hero)-->
 		<div class="row pad_bottom_large">
@@ -115,17 +121,27 @@
 					<p>linkedIn<br/>
 						<a href="{contact_linkedin}" target="_blank">in/anecka</a></p>
 				</div>
-				{!--
 				<div class="span4">
 					{contact_map}
 					<p>{contact_address}</p>
 				</div>
-				--}
 			</div>
 		</section>
 		<!-- end talk to us-->
+				<a href="{exp:pdf_press:save_to_pdf path='site/projects' attachment='0' size='A5' orientation='landscape'}">Save as PDF</a>
+				
+				{exp:pdf_press:save_to_pdf_form orientation='landscape' filename='my_projects.pdf'}
+					<button type="submit" class="btn">Save to PDF</button>
+				{/exp:pdf_press:save_to_pdf_form}
+				
 		<hr/>
-		{site_footer}
+
+		<footer class="span12">
+			<div class="span8">
+        		<p>&copy; Anecka 2012, Licensed under the Apache License, Version 2.0 <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+				<p>Check out the source for this site on GitHub <a href="https://github.com/patpohler/Anecka">https://github.com/patpohler/Anecka</a></p>
+			</div>
+    	</footer>
 	</div>
 	<!-- photo modals -->
 	{exp:channel:entries channel="Projects"}
@@ -176,6 +192,17 @@
 		{/image_3}
 	{/exp:channel:entries}
 	<!-- Placed at the end of the document so the pages load faster -->
-    {site_js}
+    <script src="{site_url}js/bootstrap-transition.js"></script>
+    <script src="{site_url}js/bootstrap-alert.js"></script>
+    <script src="{site_url}js/bootstrap-modal.js"></script>
+    <script src="{site_url}js/bootstrap-dropdown.js"></script>
+    <script src="{site_url}js/bootstrap-scrollspy.js"></script>
+    <script src="{site_url}js/bootstrap-tab.js"></script>
+    <script src="{site_url}js/bootstrap-tooltip.js"></script>
+    <script src="{site_url}js/bootstrap-popover.js"></script>
+    <script src="{site_url}js/bootstrap-button.js"></script>
+    <script src="{site_url}js/bootstrap-collapse.js"></script>
+    <script src="{site_url}js/bootstrap-carousel.js"></script>
+    <script src="{site_url}js/bootstrap-typeahead.js"></script>
 </body>
 </html>
