@@ -11,6 +11,7 @@
 	<link href="{site_url}css/anecka.css" rel="stylesheet">
 	<link href="{site_url}css/pdf.css" rel="stylesheet" media="pdf">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	{!--exp:pdf_press:scripts include_jquery="false"--}
 </head>
 <body>
 	<div id="navTop" class="navbar navbar-fixed-top">
@@ -128,11 +129,15 @@
 			</div>
 		</section>
 		<!-- end talk to us-->
+			<strong>مرحبا</strong>
+				{!--<a href="{exp:pdf_press:save_to_pdf path='site/unicode' attachment='0' size='A5' orientation='landscape'}">Save as PDF</a>--}
 				<a href="{exp:pdf_press:save_to_pdf path='site/projects' attachment='0' size='A5' orientation='landscape'}">Save as PDF</a>
 				
 				{exp:pdf_press:save_to_pdf_form orientation='landscape' filename='my_projects.pdf'}
 					<button type="submit" class="btn">Save to PDF</button>
 				{/exp:pdf_press:save_to_pdf_form}
+				
+				<button id="save_pdf_api" type="button" class="btn btn-primary">Save PDF (API)</button>
 				
 		<hr/>
 
@@ -191,6 +196,19 @@
 			</div>
 		{/image_3}
 	{/exp:channel:entries}
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#save_pdf_api').click(function() {
+				var pdf = new PDFPress();
+				var options = [];
+				//options['filename'] = 'api_test.pdf';
+				options['html_data'] = '<p>Hello world</b>';
+				options['orientation'] = "landscape";
+				options['attachment'] = true;
+				pdf.SaveToPDF(options);
+			});
+		});
+	</script>
 	<!-- Placed at the end of the document so the pages load faster -->
     <script src="{site_url}js/bootstrap-transition.js"></script>
     <script src="{site_url}js/bootstrap-alert.js"></script>

@@ -9,8 +9,10 @@
 		<section id="welcome">
 			<div class="hero-unit rotate-unit green-bk white-fore">
 				<h1>PDF Press</h1>
-	        	<p id="tagline">Save your ExpressionEngine Templates to PDF In Seconds! No 3rd party service (or monthly fee) required!</p>
-	        	<p><a class="btn btn-primary btn-large" href="http://gum.co/pdfpress">Buy Now for $15</a><script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script></p>
+	        	<p id="tagline">Save your <i>ExpressionEngine&reg;</i> Templates to PDFs with no monthly fee! Create unlimited of PDFs and save $108 to $1,068 a year. Install and start creating PDFs from your templates in seconds!</p>
+	        	<p><a class="btn btn-primary btn-large pdf-press-cta" href="http://gum.co/pdfpress"  onclick="_gaq.push(['_trackEvent', 'CallToAction', 'Click', 'PDF Press Buy Now Hero']);" >Buy Now for $15!<br/>
+					<small style="color:white;">(No risk, 100% money-back guarantee, secure checkout)</small>
+				</a></p>
 	      	</div>
 		</section>
 		<div class="row">
@@ -39,16 +41,16 @@
 			    	<div class="tab-pane active" id="tab1">
 						<div class="span5">
 							<h3>Overview</h3>
-		      				<p>PDF Press is the easiest way to save your ExpressionEngine templates to PDF. PDF Press is a stand-alone module, you don't need any additional services or 3rd party software.</p>
+		      				<p>PDF Press is the easiest way to save your <i>ExpressionEngine&reg;</i> templates from HTML/CSS to PDF. PDF Press is a stand-alone module, you don't need any additional services or 3rd party software.</p>
 							
 							<h3>Tags</h3>
-							<p>The syntax is very easy to use, you have the option of using two ExpressionEngine tags to generate a pdf</p>
+							<p>The syntax is very easy to use, you have the option of using two <i>ExpressionEngine&reg;</i> tags to generate a pdf</p>
 			    			<p>
 								<ul>
 									<li>
 										<strong>&#123;exp:pdf_press:save_to_pdf&#125;</strong> – generates a link to download the template as a PDF and it has the following parameters:
 										<ul>
-											<li><strong>path (optional)</strong> – accepts an ExpressionEngine path to convert to a PDF, if no path is given, then the current page will be used</li>
+											<li><strong>path (optional)</strong> – accepts an <i>ExpressionEngine&reg;</i> path to convert to a PDF, if no path is given, then the current page will be used</li>
 											<li><strong>filename (optional)</strong> – specifies the filename for the downloaded PDF</li>
 											<li><strong>size (optional)</strong> – specifies the paper size for the output PDF file see (ex. ‘letter’, ‘legal’, ‘a5’, etc). You can view all of the available sizes by checking under the “Size” dropdown of the PDF Preview tab</li>
 											<li><strong>orientation (optional)</strong> – specifies the orientation of the content, either “portrait” (default) or “landscape”</li>
@@ -60,6 +62,7 @@
 									</li>
 								</ul>
 							</p>
+							<p>&nbsp;</p>
 						</div>
 						<div class="span6">
 							<img src="{site_url}img/pdf_screen.png">
@@ -89,8 +92,8 @@
 								<li>Zlib</li>
 								<li>MBString extension</li>
 								<li>GD</li>
-								<li>ExpressionEngine 2.0 or later</li>
-								<li>jQuery Add-On for ExpressionEngine Installed</li>
+								<li><i>ExpressionEngine&reg;</i> 2.0 or later</li>
+								<li>jQuery Add-On for <i>ExpressionEngine&reg;</i> Installed</li>
 							</ul>
 						
 							<h3>Installation Instructions</h3>
@@ -110,7 +113,7 @@
 								<div class="span5">
 									<h3>PDF Preview</h3>
 									<p>A helpful tool you can use to develop your PDF templates with PDF Press is the PDF Preview tab. You can find it under Add-Ons > Modules > PDF Press > PDF Preview</p>
-									<p>Specify the size, orientation and an ExpressionEngine template path (‘site/test’) and click “Submit”. The PDF (or other output if there’s an error) will be displayed below in an iframe. <b>In order for the PDF Preview to work, you MUST have the JQuery Module installed.</b></p>
+									<p>Specify the size, orientation and an <i>ExpressionEngine&reg;</i> template path (‘site/test’) and click “Submit”. The PDF (or other output if there’s an error) will be displayed below in an iframe. <b>In order for the PDF Preview to work, you MUST have the JQuery Module installed.</b></p>
 					    		</div>
 								<div class="span6">
 									<img src="{site_url}img/pdf_preview.png" />
@@ -118,6 +121,7 @@
 							</div>
 							<div class="row">
 								<div class="span5">
+									<p>&nbsp;</p>
 									<h3>Tips & Troubleshooting</h3>
 
 									<p>You can troubleshoot the PDF document by setting the following settings in “dompdf_config.custom.inc.php”:</p>
@@ -131,13 +135,27 @@
 
 									<p>You can troubleshoot your template using the PDF Preview tab in the Control Panel. Just go to Add-Ons > Modules > PDF Press > PDF Preview</p>
 							
-									<h3>Support</h3>
-									<p>If you have any questions or concerns please email: <a href="mailto:pdf_press@anecka.com">pdf_press@anecka.com</a></p>
+									
+								</div>
+								<div class="span6">
+									<p>&nbsp;</p>
+									<h3>Official Support Forum</h3>
+									<p><a href="http://devot-ee.com/add-ons/support/pdf-press/viewforum/2182" class="btn btn-primary">Go to our Support Forum!</a></p>
+									<p>&nbsp;</p>
+									<h3><i>ExpressionEngine&reg;</i> Answers</h3>
+									<p>You can also visit the <a href="http://expressionengine.stackexchange.com"><i>ExpressionEngine&reg;</i> Answers ('the EE Stack Exchange site')</a> for community help!</p>
 								</div>
 							</div>
 						</div>
 					</div>
 			  	</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12 pdf-press-buy">
+				<h3>Interested in PDF Press? Click below to buy for only $15 on our secure checkout, 100% money-back guarantee</h3>
+				<p>&nbsp;</p>
+				<p><a class="btn btn-primary btn-large pdf-press-cta" href="http://gum.co/pdfpress" onclick="_gaq.push(['_trackEvent', 'CallToAction', 'Click', 'PDF Press Buy Now Overview Tab']);">Buy Now for $15!</a></p>
 			</div>
 		</div>
 		<hr/>
