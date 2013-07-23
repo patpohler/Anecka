@@ -1,7 +1,13 @@
 <meta charset="utf-8">
-<title>{site_title}</title>
-<meta name="description" content="{site_description}">
-<meta name="keywords" content="{site_keywords}">
+{if segment_1 == "pdf_press"}
+	<title>{pdfpress_title}</title>
+	<meta name="description" content="{pdfpress_description}">
+	<meta name="keywords" content="{pdfpress_keywords}">
+{if:else}
+	<title>{site_title}</title>
+	<meta name="description" content="{site_description}">
+	<meta name="keywords" content="{site_keywords}">
+{/if}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="{site_url}css/bootstrap.css" rel="stylesheet">
 <link href="{site_url}css/bootstrap-responsive.css" rel="stylesheet">
