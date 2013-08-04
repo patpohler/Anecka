@@ -5,29 +5,43 @@
 </head>
 <body>
 	{site_nav}
-	<div class="container">
-		<section id="welcome">
-			<div class="hero-unit rotate-unit green-bk white-fore">
-				<h1>PDF Press</h1>
-	        	<p id="tagline">Save your <i>ExpressionEngine&reg;</i> Templates to PDFs with no monthly fee! Create unlimited of PDFs and save $108 to $1,068 a year. Install and start creating PDFs from your templates in seconds!</p>
-	        	<p><a class="btn btn-primary btn-large pdf-press-cta" href="http://gum.co/pdfpress"  onclick="_gaq.push(['_trackEvent', 'CallToAction', 'Click', 'PDF Press Buy Now Hero']);" >Buy Now for $15!<br/>
-					<small style="color:white;">(No risk, 100% money-back guarantee, secure checkout)</small>
-				</a></p>
-	      	</div>
-		</section>
+	<div class="header green-bk">
+		<div class="container">
+			<div class="row" style="margin-top:60px;">
+				<div class="offset1 span10 green-bk white-fore">
+					<h1 style="font-size:40px;">PDF Press</h1>
+		        	<p class="lead" style="font-size:26px;margin-top:10px;">You can turn any ExpressionEngine&reg; template to PDF in a matter of seconds with no additional API or monthly fee.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container" style="margin-top:10px;">
 		<div class="row">
-			<div class="span4">
-				<h2>Easy to Install</h2>
-	           	<p>PDF Press works out of the box without any additional 3rd party services.</p>
-	        </div>
-			<div class="span4">
-				<h2>Easy to Use</h2>
-	           	<p>PDF Press is a snap to use, simply include your PDF CSS stylesheet and use one of our two tags.</p>
-	        </div>
-			<div class="span4">
-				<h2>No Monthly Subscription</h2>
-	           	<p>PDF Press converts HTML/CSS to PDF without a monthly subscription from PDFCrowd or other services.</p>
-	        </div>
+			<div class="offset1 span10">
+				<div class="span5">
+					<h3>No Awkward Conversations!</h3>
+		           	<p>You can offer your clients unlimited HTML to PDF downloads without having to explain why they need to signup for a monthly service from PDFCrowd.</p>
+
+					<h3>You're in control!</h3>
+		           	<p>Set orientation, size, filename, encryption, passwords and more</p>
+
+					<h3>Piece of Mind!</h3>
+		           	<p>We have your back, if you have any issues with PDF Press we'll help you fix it. If PDF Press doesn't meet your needs we'll refund your purchase fully with no questions asked.</p>				
+		        </div>
+				<div class="span4">
+					<h3>What others are saying</h3>
+					<p><blockquote>"Works great, and the debug view really helped with the pdf css design."</blockquote></p>
+					<p><blockquote>"I found this an excellent solution for a client who requested PDF versions for content on their site."</blockquote></p>
+					<p><blockquote>"PDF Press is awesome . . . It does exactly what I need it to do."</blockquote></p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12 pdf-press-buy">
+				<h3>Want to see PDF Press in action?</h3>
+				<p>&nbsp;</p>
+				<p><a class="btn btn-primary btn-large pdf-press-cta" href="{exp:pdf_press:save_to_pdf}" onclick="_gaq.push(['_trackEvent', 'CallToAction', 'Click', 'PDF Press Download']);">Get this page as a PDF</a></p>
+			</div>
 		</div>
 		<p>&nbsp;</p>
 		<div class="row">
@@ -58,7 +72,7 @@
 										</ul>
 									</li>
 									<li>
-										<strong>&#123;exp:pdf_press:save_to_pdf_form&#125;...&#123;/exp:pdf_press:save_to_pdf_form&#125;</strong> – this tagpair generates a form instead of a link, it has the same parameters as <strong>&#123;exp:pdf_press:save_to_pdf&#125;</strong>
+										<strong>&#123;exp:pdf_press:parse_pdf&#125;...&#123;/exp:pdf_press:parse_pdf&#125;</strong> – this tagpair will create a PDF file using whatever HTML & EE tags are inside the tagpair. This is useful for logged in / member only pages. It has the same parameters as “save_to_pdf” (except for ‘path’)
 									</li>
 								</ul>
 							</p>
@@ -70,10 +84,6 @@
 							<h3>Examples</h3>
 							<p>Using the <b>save_to_pdf</b> tag (with "path=" parameter):</p>
 							<pre>&lt;a href="&#123;exp:pdf_press:save_to_pdf path='site/projects'&#125;"&gt;Save as PDF&lt;/a&gt;</pre>
-							
-							<p>Using the <b>save_to_pdf_form</b> tag pair:</p>
-							<pre>&#123;exp:pdf_press:save_to_pdf_form&#125;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="submit" class="btn"&gt;Save to PDF&lt;/button&gt;<br/>&#123;/exp:pdf_press:save_to_pdf_form&#125;
-							</pre>
 							
 							<h3>Formatting the PDF File</h3>
 							<p>Formatting the PDF file is a simple as creating a special CSS file and referencing it in the <head> tag in your template. Use the “media” attribute and set it to “pdf”</p>
